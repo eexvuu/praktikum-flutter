@@ -11,7 +11,7 @@ class _CobaGitState extends State<CobaGit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Halo')),
+      appBar: AppBar(title: const Text('Coba github')),
     );
   }
 }
