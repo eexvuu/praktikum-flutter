@@ -10,12 +10,12 @@ class LatihanLooping extends StatefulWidget {
 class _LatihanLoopingState extends State<LatihanLooping> {
   List hasilProses = [];
   List warna = [
-    'Merah',
     'Kuning',
     'Hijau',
     'Biru',
     'Ungu',
     'Abu-abu',
+    'Merah',
   ];
 
   @override
