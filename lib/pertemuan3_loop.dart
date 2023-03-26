@@ -15,6 +15,7 @@ class _LatihanLoopingState extends State<LatihanLooping> {
     'Hijau',
     'Biru',
     'Ungu',
+    'Abu-abu',
   ];
 
   @override
