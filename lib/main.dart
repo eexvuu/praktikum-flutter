@@ -3,6 +3,7 @@ import 'pertemuan1.dart';
 import 'pertemuan2.dart';
 import 'pertemuan3_switch.dart';
 import 'pertemuan3_loop.dart';
+import 'pertemuan2_update.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -83,6 +84,18 @@ class DashboardPraktikum extends StatelessWidget {
                     }));
                   },
                   child: const Text('Praktikum 3 Loop'),
+                ),
+              ),
+              SizedBox(
+                width: 300,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const OperatorAritmatikaUpdate();
+                    }));
+                  },
+                  child: const Text('Praktikum 2 Update'),
                 ),
               ),
             ],
