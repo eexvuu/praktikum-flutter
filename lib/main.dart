@@ -68,6 +68,18 @@ class DashboardPraktikum extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
+                      return const OperatorAritmatikaUpdate();
+                    }));
+                  },
+                  child: const Text('Praktikum 2 Update'),
+                ),
+              ),
+              SizedBox(
+                width: 300,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
                       return const LatihanKondisional();
                     }));
                   },
@@ -84,18 +96,6 @@ class DashboardPraktikum extends StatelessWidget {
                     }));
                   },
                   child: const Text('Praktikum 3 Loop'),
-                ),
-              ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const OperatorAritmatikaUpdate();
-                    }));
-                  },
-                  child: const Text('Praktikum 2 Update'),
                 ),
               ),
             ],
