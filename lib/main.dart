@@ -4,6 +4,7 @@ import 'pertemuan2.dart';
 import 'pertemuan3_switch.dart';
 import 'pertemuan3_loop.dart';
 import 'pertemuan2_update.dart';
+import 'pertemuan4/buttom_navigasi.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -96,6 +97,18 @@ class DashboardPraktikum extends StatelessWidget {
                     }));
                   },
                   child: const Text('Praktikum 3 Loop'),
+                ),
+              ),
+              SizedBox(
+                width: 300,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const ButtomNavigasiBar();
+                    }));
+                  },
+                  child: const Text('Praktikum 4'),
                 ),
               ),
             ],
