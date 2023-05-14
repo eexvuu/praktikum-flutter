@@ -5,6 +5,8 @@ import 'pertemuan3_switch.dart';
 import 'pertemuan3_loop.dart';
 import 'pertemuan2_update.dart';
 import 'pertemuan4/buttom_navigasi.dart';
+import 'pertemuan5.dart';
+import 'test.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -109,6 +111,30 @@ class DashboardPraktikum extends StatelessWidget {
                     }));
                   },
                   child: const Text('Praktikum 4'),
+                ),
+              ),
+              SizedBox(
+                width: 300,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const OperasiHitung();
+                    }));
+                  },
+                  child: const Text('Praktikum 6'),
+                ),
+              ),
+              SizedBox(
+                width: 300,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const LatihanSoal();
+                    }));
+                  },
+                  child: const Text('test'),
                 ),
               ),
             ],
