@@ -6,6 +6,7 @@ import 'pertemuan3_loop.dart';
 import 'pertemuan2_update.dart';
 import 'pertemuan4/buttom_navigasi.dart';
 import 'pertemuan5.dart';
+import 'latihan_uts.dart';
 import 'test.dart';
 
 void main(List<String> args) {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
       home: const DashboardPraktikum(),
@@ -135,6 +136,18 @@ class DashboardPraktikum extends StatelessWidget {
                     }));
                   },
                   child: const Text('test'),
+                ),
+              ),
+              SizedBox(
+                width: 300,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const LatihanUTS();
+                    }));
+                  },
+                  child: const Text('Latihan UTS'),
                 ),
               ),
             ],
