@@ -60,6 +60,7 @@ class _LatihanUTSState extends State<LatihanUTS> {
               ListView.builder(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: listController.length,
                 itemBuilder: (context, index) {
                   return Padding(
