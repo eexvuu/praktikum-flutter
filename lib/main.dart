@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/widgets/button_home.dart';
 import 'pertemuan1.dart';
 import 'pertemuan2.dart';
 import 'pertemuan3_switch.dart';
@@ -7,6 +8,7 @@ import 'pertemuan2_update.dart';
 import 'pertemuan4/buttom_navigasi.dart';
 import 'pertemuan5.dart';
 import 'latihan_uts.dart';
+import 'praktikum7/pertemuan7.dart';
 import 'test.dart';
 
 void main(List<String> args) {
@@ -37,122 +39,70 @@ class DashboardPraktikum extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Dashboard Praktikum'),
       ),
-      body: Center(
-        child: Container(
-          margin: const EdgeInsets.only(top: 20.0),
-          child: Column(
-            children: [
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const HomePage();
-                    }));
-                  },
-                  child: const Text('Praktikum 1'),
-                ),
+      body: ListView(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 20.0, left: 20, right: 20),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  HomeButton(
+                    lokasi: HomePage(),
+                    deskripsi: 'TextField + SnackBar',
+                    judul: 'Praktikum 1',
+                  ),
+                  HomeButton(
+                    lokasi: OperatorAritmatika(),
+                    deskripsi: 'Function ElevatedButton Operasi Aritmatika',
+                    judul: 'Praktikum 2',
+                  ),
+                  HomeButton(
+                    lokasi: OperatorAritmatikaUpdate(),
+                    deskripsi:
+                        'Update code praktikum 2 menggunakan named parameter ',
+                    judul: 'Praktikum 2',
+                  ),
+                  HomeButton(
+                    lokasi: LatihanKondisional(),
+                    deskripsi: 'Latihan pengkondisian switch',
+                    judul: 'Praktikum 3',
+                  ),
+                  HomeButton(
+                    lokasi: LatihanLooping(),
+                    deskripsi: 'Latihan Looping',
+                    judul: 'Praktikum 3',
+                  ),
+                  HomeButton(
+                    lokasi: ButtomNavigasiBar(),
+                    deskripsi: 'Praktikum Bottom navigasi bar',
+                    judul: 'Praktikum 4',
+                  ),
+                  HomeButton(
+                    lokasi: OperasiHitung(),
+                    deskripsi: 'Praktikum Operasi hitung',
+                    judul: 'Praktikum 6',
+                  ),
+                  HomeButton(
+                    lokasi: LatihanSoal(),
+                    deskripsi: 'Latihan',
+                    judul: 'test',
+                  ),
+                  HomeButton(
+                    lokasi: LatihanUTS(),
+                    deskripsi: 'Latihan Soal UTS',
+                    judul: 'Latihan UTS',
+                  ),
+                  HomeButton(
+                    lokasi: KalkulasiLingkaran(),
+                    deskripsi: 'Praktik Class',
+                    judul: 'Praktikum 7',
+                  ),
+                ],
               ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const OperatorAritmatika();
-                    }));
-                  },
-                  child: const Text('Praktikum 2'),
-                ),
-              ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const OperatorAritmatikaUpdate();
-                    }));
-                  },
-                  child: const Text('Praktikum 2 Update'),
-                ),
-              ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const LatihanKondisional();
-                    }));
-                  },
-                  child: const Text('Praktikum 3 Switch'),
-                ),
-              ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const LatihanLooping();
-                    }));
-                  },
-                  child: const Text('Praktikum 3 Loop'),
-                ),
-              ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const ButtomNavigasiBar();
-                    }));
-                  },
-                  child: const Text('Praktikum 4'),
-                ),
-              ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const OperasiHitung();
-                    }));
-                  },
-                  child: const Text('Praktikum 6'),
-                ),
-              ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const LatihanSoal();
-                    }));
-                  },
-                  child: const Text('test'),
-                ),
-              ),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const LatihanUTS();
-                    }));
-                  },
-                  child: const Text('Latihan UTS'),
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
