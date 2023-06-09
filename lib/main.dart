@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/pertemuan8.dart';
 import 'package:test_app/widgets/button_home.dart';
 import 'pertemuan1.dart';
 import 'pertemuan2.dart';
@@ -97,6 +98,11 @@ class DashboardPraktikum extends StatelessWidget {
                     lokasi: KalkulasiLingkaran(),
                     deskripsi: 'Praktik Class',
                     judul: 'Praktikum 7',
+                  ),
+                  HomeButton(
+                    lokasi: WidgetLanjutan(),
+                    deskripsi: 'Praktik Widget Lanjutan',
+                    judul: 'Praktikum 8',
                   ),
                 ],
               ),
